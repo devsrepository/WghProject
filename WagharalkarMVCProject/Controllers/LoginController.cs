@@ -15,7 +15,10 @@ namespace WagharalkarMVCProject.Controllers
         {
             return View();
         }
-
+        public ActionResult Details()
+        {
+            return View();
+        }
         public ActionResult LoginIN(LoginModel model)
         {
             if (ModelState.IsValid)
