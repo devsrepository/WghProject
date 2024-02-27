@@ -1,0 +1,89 @@
+﻿
+@{
+    ViewBag.Title = "AppointmentList";
+    Layout = "~/Views/Shared/_Layout - Admin.cshtml"; // cut paste this admin layout to the index.cshtml page. adn add here layout page.
+}
+@*add the js file*@
+<script src="~/Scripts/jquery-3.4.1.min.js"></script> 
+<script src="~/Content/Appointment.js"></script>
+
+<h2>AppointmentList</h2>
+<section id="why-us">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12 d-flex align-items-stretch">
+                <div class="table-responsive">
+                    <table id="tblAppointment" class="table table-bordered table-dark table-hover">
+                        <thead class="table-responsive">
+                            <tr class="table-responsive">
+                                <th class="table-primary">Id</th>
+                                <th class="table-secondary">Name</th>
+                                <th class="table-danger">Email</th>
+                                <th class="table-info">City</th>
+                                <th class="table-light">MobileNo</th>
+                                <th class="table-warning">AppointmentDate</th>
+                                <th class="table-success">Gender</th>
+                                <th class="table-primary">Message</th>
+                                <th class="table-danger">CreateDate</th>
+                                <th class="table-light">UpdateDate</th>
+                                <th class="table-info">CreatedBy</th>
+                                <th class="table-warning">UpdatedBy</th>
+                                <th class="table-warning">State</th>
+                            </tr>
+
+
+                        </thead>
+                        <tbody>
+                            @*this should be declared otherwise it will be not shown.*@
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*this is the code of popup.taking online*@
+    <div id="CategoryModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content modal-lg">
+                <div class="modal-body tab-content">
+                    <div class="container container-lg mt-3" id="tblAppointment">
+                        <table id="tblAppointment" class="table table-bordered table-dark table-hover">
+                            <thead class="table-responsive">
+                                <tr class="table-responsive">
+                                    <th class="table-danger">Id</th>
+                                    <th class="table-light">Name</th>
+                                    <th class="table-info">Email</th>
+                                    <th class="table-primary">City</th>
+                                    <th class="table-secondary">MobileNo</th>
+                                    <th class="table-success">AppointmentDate</th>
+                                    <th class="table-danger">Gender</th>
+                                    <th class="table-info">Message</th>
+                                    <th class="table-light">CreateDate</th>
+                                    <th class="table-danger">UpdateDate</th>
+                                    <th class="table-secondary">CreatedBy</th>
+                                    <th class="table-primary">UpdatedBy</th>
+                                    <th class="table-warning">State</th>
+
+                                </tr>
+
+
+                            </thead>
+                            <tbody>
+                                @*this should be declared otherwise it will be not shown.*@
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+                   

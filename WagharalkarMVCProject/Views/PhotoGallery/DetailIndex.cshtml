@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewBag.Title = "DetailIndex";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Content/PhotoGallery.js"></script>
+
+
+<h2>DetailIndex</h2>
+
+<input type="hidden" value="@ViewBag.Id" id="hdnId" />
+
+@*<section id="why-us">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-4 d-flex align-items-stretch">
+                <div class="content">
+                    <table id="tblPhotoGallerylist">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Title</th>
+                                <th>Image1</th>
+                                <th>Image2</th>
+                                <th>Type</th>
+                                <th>CreateDate</th>
+                                <th>UpdateDate</th>
+                                <th>CreatedBy</th>
+                                <th>Updatedby</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>*@
+
+
+
+<section id="why-us">
+    <div id="CategoryModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container" id="DetailCategory">
+                        <table id="tblPhotoGallerylist" class="table table-bordered table-dark table-hover table-sm">
+                            <thead class="table-responsive">
+                                <tr class="table-responsive">
+                                    <th class="table-primary">Id</th>
+                                    <th class="table-secondary">Title</th>
+                                    <th class="table-dark">Image1</th>
+                                    <th class="table-info">Image2</th>
+                                    <th class="table-light">Type</th>
+                                    <th class="table-danger">CreateDate</th>
+                                    <th class="table-warning">UpdateDate</th>
+                                    <th class="table-primary">CreatedBy</th>
+                                    <th class="table-secondary">Updatedby</th>
+
+                                </tr>
+
+                            </thead>
+                            <tbody>
+                            </tbody>
+
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

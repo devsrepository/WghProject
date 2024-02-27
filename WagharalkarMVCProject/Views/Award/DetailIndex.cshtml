@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewBag.Title = "DetailIndex";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Content/Award.js"></script>
+
+<h2>DetailIndex</h2>
+
+<input type="hidden" value="@ViewBag.Id" id="hdnId"/>
+
+<section id="why-us">
+    @*<div class="container">
+
+        <div class="row">
+            <div class="col-lg-4 d-flex align-items-stretch">
+                <div class="content">
+                    <table id="tblAwardsList">
+                        //whole table is copied from index.cshtml to here for GetListById
+                        <thead>
+                            <tr>
+                                <th>Id</th> //this is added for GetListById
+                                <th>Title</th>
+                                <th>Details</th>
+                                <th>Image1</th>
+                                <th>Image2</th>
+                                <th>Type</th>
+                                <th>Date</th>
+                                <th>CreateDate</th>
+                                <th>UpdateDate</th>
+                                <th>CreatedBy</th>
+                                <th>Updatedby</th>
+                            </tr>
+
+
+                        </thead>
+
+                        <tbody>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>*@
+
+    <div id="CategoryModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content modal-lg">
+                <div class="modal-body tab-content">
+                    <div class="container container-lg" id="tblAwardsLists">
+                        <table id="tblAwardsLists" class=" table table-bordered table-dark table-hover table-responsive">
+                            <thead class="table-responsive">
+                                <tr class="table-responsive">
+                                    <th class="table-primary">Id</th>
+                                    <th class="table-secondary">Title</th>
+                                    <th class="table-warning">Details</th>
+                                    <th class="table-danger">Image1</th>
+                                    <th class="table-success">Image2</th>
+                                    <th class="table-light">Type</th>
+                                    <th class="table-info">Date</th>
+                                    <th class="table-primary">CreateDate</th>
+                                    <th class="table-secondary">UpdateDate</th>
+                                    <th class="table-warning">CreatedBy</th>
+                                    <th class="table-active">Updatedby</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+

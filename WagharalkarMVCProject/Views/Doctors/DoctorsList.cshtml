@@ -1,0 +1,107 @@
+﻿
+@{
+    ViewBag.Title = "DoctorsList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Content/Doctors.js"></script>
+@*<h2>DoctorsList</h2>*@
+
+<section id="why-us">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-4 d-flex align-items-stretch">
+                <div class="container-lg" id="DetailCategory">
+                    <table id="tblDoctors" class="table table-bordered table-hover table-responsive table-sm">
+                        <thead class="table-responsive">
+                            <tr class="table-responsive">
+                                <th class="table-primary">Id</th>
+                                <th class="table-secondary">Name</th>
+                                <th class="table-warning">Image</th>
+                                <th class="table-danger">Designation</th>
+                                <th class="table-success">Description</th>
+                                <th class="table-light">Education</th>
+                                <th class="table-info">InstagramLink</th>
+                                <th class="table-primary">FacebookLink</th>
+                                <th class="table-secondary">LinkedInLink</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="CategoryModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content modal-lg">
+                <div class="modal-body tab-content">
+                    <div class="container container-lg mt-3">
+                        <table id="tblDoctorsList" class=" table table-bordered table-dark table-hover">
+                            <thead class="table-responsive">
+                                <tr class="table-responsive">
+                                    <th class="table-primary">Id</th>
+                                    <th class="table-secondary">Name</th>
+                                    <th class="table-warning">Image</th>
+                                    <th class="table-danger">Designation</th>
+                                    <th class="table-success">Description</th>
+                                    <th class="table-light">Education</th>
+                                    <th class="table-info">InstaGramLink</th>
+                                    <th class="table-primary">FacebookLink</th>
+                                    <th class="table-secondary">LinkedInLink</th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ======= Doctors Section ======= -->
+<section class="doctors">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Doctors</h2>
+            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row"  id="DoctorsList" >
+
+            @*<div class="col-lg-6">*@
+                @*<div class="member d-flex align-items-start">*@
+                    @*<div class="pic"><img src="assets/img/doctors/doctors-1.jpg" class="img-fluid" alt=""></div>
+                    <div class="member-info">
+                        <h4>Walter White</h4>
+                        <span>Chief Medical Officer</span>
+                        <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                        <div class="social">
+                            <a href=""><i class="ri-twitter-fill"></i></a>
+                            <a href=""><i class="ri-facebook-fill"></i></a>
+                            <a href=""><i class="ri-instagram-fill"></i></a>
+                            <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                        </div>
+                    </div>*@
+                @*</div>
+            </div>*@
+         </div>
+         </div>  
+</section><!-- End Doctors Section -->

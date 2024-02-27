@@ -1,0 +1,228 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Content/Appointment.js"></script>
+<script src="~/Content/City.js"></script> @*// these 2 scripts added for ddl*@
+<script src="~/Content/States.js"></script> @*// these 2 scripts added for ddl*@
+<h2>Index</h2>
+<h1>Welcome to Appointment Page !!</h1>
+
+
+<section id="appointment" class="appointment section-bg">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Make an Appointment</h2>
+            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <form action="forms/appointment.php" method="post" role="form" class="php-email-form">
+            <div class="row">
+                <div class="col-md-4 form-group">
+                    <span id="spnName" style="color:red"></span>
+                    <input type="text" name="name" class="form-control" id="#txtName" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                    <div class="validate"></div>
+                </div>
+                <div class="col-md-4 form-group mt-3 mt-md-0">
+                    <input type="email" class="form-control" name="email" id="txtEmail" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+                    <div class="validate"></div>
+                </div>
+                @*<div class="col-md-4 form-group mt-3 mt-md-0">
+                        <select name="city" id="ddlCities" class="form-select">
+                            <option>Select City</option>
+                        </select>
+                        <div class="validate"></div>
+                    </div>*@
+                <div class="col-md-4 form-group mt-3 ">
+                    @*changes 14/02/2024 onchange="GetCityList()"*@
+                    <select name="State" id="ddlStates" onchange="GetCityList()" class="form-select">
+
+                        <option>Select State</option>
+                    </select>
+                    <div class="validate"></div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-4 form-group mt-3 mt-md-0">
+                    <select name="city" id="ddlCities" class="form-select">
+                        <option>Select City</option>
+                    </select>
+                    <div class="validate"></div>
+                </div>
+                <div class="col-md-4 form-group mt-3">
+                    <span id="spnmobile" style="color:red"></span>
+                    <input type="tel" class="form-control" name="phone" id="txtMobileNo" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                    <div class="validate"></div>
+                </div>
+
+                <div class="col-md-4 form-group mt-3">
+                    <input type="text" name="date" class="form-control " id="txtAppointmentDate" placeholder="Appointment Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                    <div class="validate"></div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-4 form-group mt-3">
+                    <input type="text" name="Gender" class="form-control" id="txtGender" placeholder="Gender" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                    <div class="validate"></div>
+                </div>
+                <div class="col-md-4 form-group mt-3">
+                    <select name="department" id="department" class="form-select">
+                        <option value="">Select Department</option>
+                        <option value="Department 1">Cardiology</option>
+                        <option value="Department 2">Pediatrics</option>
+                        <option value="Department 3">Neurology</option>
+                        <option value="Department 3">Hepatology</option>
+                    </select>
+                    <div class="validate"></div>
+                </div>
+                <div class="col-md-4 form-group mt-3">
+                    <select name="doctor" id="doctor" class="form-select">
+                        <option value="">Select Doctor</option>
+                        <option value="Doctor 1">Dr.Amit Ganvir</option>
+                        <option value="Doctor 2">Dr. Sayali Patil</option>
+                        <option value="Doctor 3">Dr.Imran NoorMohammad</option>
+                    </select>
+                    <div class="validate"></div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-4 form-group mt-3">
+                    <input type="date" class="form-control datepicker" name="createDate" id="dtCreateDate" placeholder="Your createDate" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                    <div class="validate"></div>
+                </div>
+                <div class="col-md-4 form-group mt-3">
+                    <input type="date" class="form-control datepicker" name="updateeDate" id="dtUpdateDate" placeholder="Your updateDate" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                    <div class="validate"></div>
+                </div>
+                <div class="form-group mt-3">
+                    <textarea class="form-control" name="message" rows="5" id="txtMessage" placeholder="Message (Optional)"></textarea>
+                    <div class="validate"></div>
+                </div>
+            </div>
+
+
+            <div class="mb-3">
+                @*<div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div>*@
+            </div>
+            <div class="text-center"><button type="submit" id="btnSubmit" onclick="saveAppointment()">Make an Appointment</button></div>
+        </form>
+
+    </div>
+</section><!-- End Appointment Section -->
+@*<input type="hidden" id="hdnId" value="id" />
+    <br />
+    <input type="text" id="txtName" placeholder="Please enter the Name" />
+    <br />
+    <input type="text" id="txtEmail" placeholder="Please enter the Email" />
+    <br />
+    <select id="ddlCity">
+        <option>Nagpur</option>
+        <option>Pune</option>
+        <option>Mumbai</option>
+        <option>Aurangabad</option>
+    </select>
+    <br />
+    <input type="text" id="txtMobileNo" placeholder="Please enter the MobileNo" class="form-control" />
+    <br />
+    <input type="date" id="dtAppointmentDate" placeholder="Please enter the AppointmentDate" class="form-control" />
+    <br />
+    <input type="text" id="txtGender" placeholder="Please enter the Gender" class="form-control" />
+    <br />
+    <input type="text" id="txtMessage" placeholder="Please enter the Message" class="form-control" />
+    <br />
+    <input type="date" id="dtCreateDate" placeholder="Please enter the CreateDate" class="form-control" />
+    <br />
+    <input type="date" id="dtUpdateDate" placeholder="Please enter the UpdateDate" class="form-control" />
+    <br />
+    <input type="text" id="txtCreatedby" placeholder="Please enter the id" class="form-control" />
+    <br />
+    <input type="text" id="txtUpdatedby" placeholder="Please enter the id" class="form-control" />
+    <br />
+    <input type="submit" id="btnSubmit" value="Submit" onclick="saveAppointment()" class="form-control" />*@
+
+
+<!--<table id="tblAppointment" border="1">
+    <thead>
+        <tr border="1">
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>City</th>
+            <th>MobileNo</th>
+            <th>AppointmentDate</th>
+            <th>Gender</th>
+            <th>Message</th>
+            <th>CreateDate</th>
+            <th>UpdateDate</th>
+            <th>CreatedBy</th>
+            <th>UpdatedBy</th>
+        </tr>
+
+
+    </thead>
+    <tbody>
+        -->
+-->
+@*this should be declared otherwise it will be not shown.*@
+<!--</tbody>
+</table>-->
+@*<table style="border:double solid blue">
+        <tr>
+            <td>Id</td>
+            <td><span id="lblId"></span></td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td><span id="lblName"></span></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><span id="lblEmail"></span></td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td><span id="lblCity"></span></td>
+        </tr>
+        <tr>
+            <td>MobileNo</td>
+            <td><span id="lblMobileNo"></span></td>
+        </tr>
+        <tr>
+            <td>AppointmentDate</td>
+            <td><span id="lblAppointmentDate"></span></td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td><span id="lblGender"></span></td>
+        </tr>
+        <tr>
+            <td>Message</td>
+            <td><span id="lblMessage"></span></td>
+        </tr>
+        <tr>
+            <td>CreateDate</td>
+            <td><span id="lblCreateDate"></span></td>
+        </tr>
+        <tr>
+            <td>UpdateDate</td>
+            <td><span id="lblUpdateDate"></span></td>
+        </tr>
+        <tr>
+            <td>CreatedBy</td>
+            <td><span id="lblCreatedby"></span></td>
+        </tr>
+        <tr>
+            <td>UpdatedBy</td>
+            <td><span id="lblUpdatedby"></span></td>
+        </tr>
+    </table>*@
+

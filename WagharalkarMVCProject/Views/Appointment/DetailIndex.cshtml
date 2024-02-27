@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewBag.Title = "DetailIndex";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Content/Appointment.js"></script>
+
+<h2>DetailIndex</h2>
+<input type="hidden" value="@ViewBag.Id"  id="hdnId"/>
+
+
+<section id="why-us">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-4 d-flex align-items-stretch">
+                <div class="table-responsive">
+                    <table id="tblAppointmentRowbyId" class="table table-bordered table-hover table-dark">
+                        <thead class="table-responsive">
+                            <tr class="table-responsive table-bordered">
+                                <th class="table-primary">Id</th>
+                                <th class="table-secondary">Name</th>
+                                <th class="table-danger">Email</th>
+                                <th class="table-dark">City</th>
+                                <th class="table-info">MobileNo</th>
+                                <th class="table-light">AppointmentDate</th>
+                                <th class="table-success">Gender</th>
+                                <th class="table-warning">Message</th>
+                                <th class="table-secondary">CreateDate</th>
+                                <th class="table-danger">UpdateDate</th>
+                                <th class="table-primary">CreatedBy</th>
+                                <th class="table-warning">UpdatedBy</th>
+                            </tr>
+
+
+                        </thead>
+                        <tbody>
+                           @*this should be declared otherwise it will be not shown.*@
+                        </tbody>
+                       </table>
+                    </div>
+                 </div>
+            </div>
+        </div>
+
+
+    @*<div id="CategoryModal" class="modal fade modal-lg" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content modal-lg">
+                <div class="modal-body modal-lg">
+                    <div class="container container-xl mt-3 " id="DetailCategory">
+                        <table id="tblAppointmentRowbyId" class="table table-bordered table-dark table-responsive">
+                            <thead class="table-responsive">
+                                <tr class="table-info">
+                                    <th class="table-primary">Id</th>
+                                    <th class="table-secondary">Name</th>
+                                    <th class="table-danger">Email</th>
+                                    <th class="table-dark">City</th>
+                                    <th class="table-info">MobileNo</th>
+                                    <th class="table-light">AppointmentDate</th>
+                                    <th class="table-success">Gender</th>
+                                    <th class="table-warning">Message</th>
+                                    <th class="table-secondary">CreateDate</th>
+                                    <th class="table-danger">UpdateDate</th>
+                                    <th class="table-primary">CreatedBy</th>
+                                    <th class="table-warning">UpdatedBy</th>
+                                </tr>
+
+                            </thead>
+                            <tbody>
+                            </tbody>
+
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>*@
+
+</section>

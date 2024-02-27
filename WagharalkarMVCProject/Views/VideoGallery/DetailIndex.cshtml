@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewBag.Title = "DetailIndex";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Content/VideoGallery.js"></script>
+
+<h2>DetailIndex</h2>
+<input type="hidden" value="@ViewBag.Id" id="hdnId"/>
+
+<section id="why-us" >
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-4 d-flex align-items-stretch">
+                <div class="content">
+                    <table id="tblVideoGallerylist" class="table table-bordered table-responsive table-dark table-hover">
+                        <thead class="table-responsive">
+                            <tr class="table-responsive">
+                                <th class="table-primary">Id</th>
+                                <th class="table-secondary">Title</th>
+                                <th class="table-active">YouTubeUrl</th>
+                                <th class="table-danger">Type</th>
+                                <th class="table-warning">CreateDate</th>
+                                <th class="table-info">UpdateDate</th>
+                                <th class="table-hover">CreatedBy</th>
+                                <th class="table-light">Updatedby</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+         </div>
+     </div>
+ </section>
+<section id="why-us">
+    <div id="CategoryModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container" id="DetailCategory">
+                        <table id="tblVideoGallerylist" class="table table-bordered table-dark table-hover table-sm">
+                            <thead class="table-responsive">
+                                <tr class="table-responsive">
+                                    <th class="table-primary">Id</th>
+                                    <th class="table-secondary">Title</th>
+                                    <th class="table-active">YouTubeUrl</th>
+                                    <th class="table-danger">Type</th>
+                                    <th class="table-warning">CreateDate</th>
+                                    <th class="table-info">UpdateDate</th>
+                                    <th class="table-hover">CreatedBy</th>
+                                    <th class="table-light">Updatedby</th>
+
+                                </tr>
+
+                            </thead>
+                            <tbody>
+                            </tbody>
+
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

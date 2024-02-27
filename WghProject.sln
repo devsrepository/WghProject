@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WagharalkarMVCProject", "WagharalkarMVCProject\WagharalkarMVCProject.csproj", "{77DEDF25-3A5D-4FE5-8994-DB45564249BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WagharalkarMVCProject.Data", "WagharalkarMVCProject.Data\WagharalkarMVCProject.Data.csproj", "{95E44BCB-BE5B-409C-B2A0-D45287DA961F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77DEDF25-3A5D-4FE5-8994-DB45564249BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77DEDF25-3A5D-4FE5-8994-DB45564249BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77DEDF25-3A5D-4FE5-8994-DB45564249BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77DEDF25-3A5D-4FE5-8994-DB45564249BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95E44BCB-BE5B-409C-B2A0-D45287DA961F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95E44BCB-BE5B-409C-B2A0-D45287DA961F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95E44BCB-BE5B-409C-B2A0-D45287DA961F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95E44BCB-BE5B-409C-B2A0-D45287DA961F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {91834081-3AA3-4085-B2D3-10EABC9083D1}
+	EndGlobalSection
+EndGlobal
